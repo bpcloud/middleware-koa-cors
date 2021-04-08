@@ -1,0 +1,35 @@
+{
+  "description": "CORS middleware of bpframework",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "directories": {},
+  "engines": {
+    "node": ">=10"
+  },
+  "homepage": "https://github.com/bpcloud/middleware-koa-cors#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bpcloud/middleware-koa-cors.git"
+  },
+  "keywords": [
+    "bpframework",
+    "cors"
+  ],
+  "files": [
+    "libs",
+    "types",
+    "index.js"
+  ],
+  "types": "types/index.d.ts",
+  "license": "MIT",
+  "main": "./index.js",
+  "maintainers": [
+    {
+      "name": "brainpoint",
+      "email": "bpoint.lee@gmail.com"
+    }
+  ],
+  "name": "@bpframework/middleware-koa-cors",
+  "version": "0.0.2"
+}
