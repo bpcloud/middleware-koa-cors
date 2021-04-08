@@ -12,7 +12,7 @@ var afterRoute = require('./afterRoute');
 module.exports = async function (ctx) {
   // https://segmentfault.com/a/1190000000709909
   if (ctx.method.toLowerCase() == 'options') {
-    await afterRoute(ctx);
+    await afterRoute.middleware(ctx);
     ctx.response.body = '';
     return false;
   }

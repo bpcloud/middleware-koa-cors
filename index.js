@@ -13,7 +13,7 @@ var initiator = require('./libs/initiator');
 
 exports.name = 'middleware-koa-cors';
 
-export function setEnable(isEnable) {
+exports.setEnable = function setEnable(isEnable) {
   afterRoute.setEnable(isEnable);
 }
 
@@ -24,11 +24,12 @@ exports.middleware = function (cfg) {
   cfg.allowHeaders = cfg.allowHeaders || ['Origin', 'Content-Type', 'Accept'];
   
   afterRoute.setCfg(cfg);
+  afterRoute.setEnable(true);
 
   return {
     type: 'koa',
     name: exports.name,
-    afterRoute,
+    afterRoute: afterRoute.middleware,
     beforeRoute,
     initiator: (app) => {
       return initiator(app, cfg);

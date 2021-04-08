@@ -44,7 +44,7 @@ exports.setCfg = function setCfg(cfg) {
   };
 }
 
-module.exports = async function (ctx) {
+exports.middleware = async function (ctx) {
 
   if (global[SYM_ENABLE]) {
     if (ctx.request.headers.origin && ctx.request.headers.origin.length < 256) {
