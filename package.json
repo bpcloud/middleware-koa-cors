@@ -1,7 +1,6 @@
 {
   "description": "CORS middleware of bpframework",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {},
   "directories": {},
   "engines": {
